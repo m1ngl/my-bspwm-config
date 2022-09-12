@@ -27,6 +27,9 @@ super + alt + {q,r}
 super + {_,shift + }q
 	bspc node -{c,k}
 
+super + e
+	thunar
+
 # alternate between the tiled and monocle layout
 super + m
 	bspc desktop -l next
@@ -88,6 +91,8 @@ super + {_,shift + }{1-9,0}
 #
 # preselect
 #
+#ctrl + alt + right
+#	alacritty
 
 # preselect the direction
 super + ctrl + {h,j,k,l}
@@ -110,9 +115,13 @@ super + ctrl + shift + space
 #
 
 super + v
-	i3lock
+	/usr/lib/gpaste/gpaste-ui
+
+super + r
+	rofi -show window
 
 # expand a window by moving one of its side outward
+
 super + alt + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
@@ -129,9 +138,17 @@ super + {Left,Down,Up,Right}
 super + shift + F12
 	gnome-screenshot -i
 
-super + shift + F1
-	~/.config/polybar/brightness.sh sub 5
+#super + shift + F1
+#	~/.config/polybar/brightness.sh sub 5
 
-super + shift + F2
-	~/.config/polybar/brightness.sh add 5
+#super + shift + F2
+#	~/.config/polybar/brightness.sh add 5
 
+super + F3
+	playerctl -a previous
+
+super + F4
+	playerctl -a play-pause
+
+super + F5
+	playerctl -a next
