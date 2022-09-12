@@ -10,4 +10,4 @@
 ```bash
 # pacman -S bspwm sxhkd polybar rofi ranger alacritty neofetch dunst
 ```
-- 额外组件：xfce4-power-manager feh xfce4-volumed-pulse[AUR](https://aur.archlinux.org/packages/xfce4-volumed-pulse-git)
+- 额外组件：xfce4-power-manager feh xfce4-volumed-pulse\[[AUR](https://aur.archlinux.org/packages/xfce4-volumed-pulse-git)\]
