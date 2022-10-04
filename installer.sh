@@ -29,7 +29,7 @@ done
 for i in xfce4-volumed-pulse xfce4-power-manager sxhkd polybar fcitx5 picom feh dunst /usr/lib/gpaste/gpaste-daemon
 do
     if ! command -v $i &>/dev/null; then
-        export UnAccess_Module+=$i
+        export UnAccess_Module+=" $i"
         case $i in
         xfce4-volumed-pulse)
             export pulse="";;
