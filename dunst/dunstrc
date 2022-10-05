@@ -1,25 +1,26 @@
 [colors]
-    background = "#eceff4"
-    frame = "#d8dee9"
+	background = "#2e3440"
+    frame = "#3b4252"
+	#foreground = "#e5e9f0"
 
 [global]
     ### Display ###
 
     monitor = 0
     follow = keyboard
-
+    origin = bottom-right
     #geometry = "262x5-829-46"
     #geometry = "262x3-14+46"
     geometry = "300x50-10+50"
     indicate_hidden = yes
     shrink = false
-    transparency = 10
+    transparency = 0
     notification_height = 0
     separator_height = 2
-    padding = 24
+    padding = 20
     horizontal_padding = 20
     frame_width = 0
-    corner_radius = 7
+    corner_radius = 10
 
     #frame_color =
     separator_color = auto
@@ -27,8 +28,8 @@
     idle_threshold = 120
 
     ### Text ###
-    font = Comfortaa 14
-    line_height = 0
+    font = Source Han Sans CN Medium 16
+	line_height = 0
 
     markup = full
 
@@ -42,7 +43,7 @@
     #   %n  progress value if set without any extra characters
     #   %%  Literal %
     # Markup is allowed
-    format = "<b>%a:%s</b>\n%b"
+    format = "<b>%s</b>\n%b"
     alignment = left
     show_age_threshold = 60
     word_wrap = true
@@ -54,12 +55,12 @@
 
     ### Icons ###
     icon_position = left
-    max_icon_size = 50
-    icon_path = /usr/share/icons/Tela/32/status/:/usr/share/icons/Tela/32/devices/:/usr/share/icons/Tela/16/apps
+    max_icon_size = 64
+    icon_path = /usr/share/icons/Nord-Icon/48x48/status/:/usr/share/icons/Nord-Icon/48x48/devices/:/usr/share/icons/Nord-Icon/48x48/apps
 
     ### History ###
     sticky_history = yes
-    history_length = 40
+    history_length = 20
 
     ### Misc/Advanced ###
     dmenu = /usr/bin/kitty -e fzf:
@@ -78,13 +79,13 @@
 
 [urgency_low]
     background = colors.background
-    foreground = "#5e81ac"
+    foreground = "#81a1c1"
     frame_color = colors.frame
     timeout = 5
 
 [urgency_normal]
     background = colors.background
-    foreground = "#2e3440"
+    foreground = "#e5e9f0"
     frame_color = colors.frame
     timeout = 5
 

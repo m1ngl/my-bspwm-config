@@ -5,9 +5,13 @@ if [ -z "$playerlist" ]; then
 	echo "未在播放"
 else
 	export playing=$(playerctl --player=$playerlist metadata title 2>/dev/null)
-	if [ -z "playing" ]; then
+	if [ -z "$playing" ]; then
 		echo "未在播放"
 	else
-		echo "${playerlist} : ${playing}"
+		if [ -z "$playing" ]; then
+			echo "正在读取"
+		else
+			echo "听歌 : ${playing}"
+		fi
 	fi
 fi

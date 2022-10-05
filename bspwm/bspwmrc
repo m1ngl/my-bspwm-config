@@ -17,7 +17,7 @@ picom --experimental-backends --config ~/.config/picom/picom.conf &
 # 壁纸
 feh --bg-scale ~/day.jpg &
 # 通知服务
-dunst &
+dunst -conf ~/.config/dunst/dunstrc &
 # 剪贴板服务
 /usr/lib/gpaste/gpaste-daemon &
 
@@ -36,8 +36,9 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 #边框颜色
-bspc config focused_border_color "#B22222"
-bspc config normal_border_color "#7FFF00"
+bspc config focused_border_color "#5DB0CD"
+bspc config normal_border_color "#808080"
+
 #只有一个窗口时开启单窗口模式
 bspc config single_monocle false
 #bspc config focus_follows_pointer true
@@ -49,3 +50,9 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a Gedit state=floating
+bspc rule -a jetbrains-idea-ce state=floating
+bspc rule -a "com.xunlei.download" state=floating
+bspc rule -a ToDesk state=floating
+
+bspc rule -a alacritty-float state=floating
+bspc rule -a Gnome-screenshot state=floating
