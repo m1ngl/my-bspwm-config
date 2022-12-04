@@ -15,7 +15,7 @@ fcitx5 &
 # Picom窗口合成器
 picom --experimental-backends --config ~/.config/picom/picom-yaoc.conf &
 # 壁纸
-~/.config/bspwm/fehbg.sh 20 &
+
 # 通知服务
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 # 剪贴板服务
