@@ -1,4 +1,3 @@
-# 我给这玩意儿翻译
 # wm independent hotkeys
 # wm全局热键
 
@@ -47,24 +46,16 @@ super + g
 #
 
 # set the window state
-super + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+super + {t,shift + t,s}
+	bspc node -t {tiled,pseudo_tiled,floating}
 
 # set the node flags
-super + ctrl + {m,x,y,z}
-	bspc node -g {marked,locked,sticky,private}
+super + ctrl + {z,x}
+	bspc node -g {locked,sticky}
 
 #
 # focus/swap
 #
-
-# focus the node in the given direction
-super + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
-
-# focus the node for the given path jump
-super + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
 super + {_,shift + }c
@@ -87,6 +78,23 @@ super + {o,i}
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# 旋转窗口
+super + d
+	bspc node @/ -C forward
+
+super + a
+	bspc node @/ -C backward
+
+super + {w,b}
+	bspc node first_ancestor -R {90,270}
+
+super + f
+	if [ -z "$(bspc query -N -n focused.fullscreen)" ]; then \
+		bspc node focused -t fullscreen; \
+	else \
+		bspc node focused -t tiled; \
+	fi;
 
 #
 # preselect
@@ -152,3 +160,6 @@ super + F4
 
 super + F5
 	playerctl -a next
+
+super + alt + Return
+	~/.config/bspwm/slop.sh
