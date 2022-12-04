@@ -4,11 +4,11 @@
     draw_bold_text_with_bright_colors: true
 
     window:
-      opacity: 0.8
+      opacity: 0.6
 
     cursor:
       style:
-        shape: Underline
+        shape: Beam
         blinking: On
 
     colors:
@@ -16,30 +16,30 @@
         background: '0x272822'
         foreground: '0xf1ebeb'
       normal:
-        black:   '0x59594c'
-        red:     '0xd6326c'
-        green:   '0x8dba31'
-        yellow:  '0xd3c33d'
-        blue:    '0x47bdd1'
-        magenta: '0x915af4'
-        cyan:    '0x4ec2ac'
-        white:   '0xc8cab8'
+        black:   '0x3b4252' #黑色
+        red:     '0x8f616a' #红色
+        green:   '0xa3be8c' #绿色
+        yellow:  '0xebcb8b' #黄色
+        blue:    '0x81a1c1' #蓝色
+        magenta: '0xb48ead' #品红
+        cyan:    '0x8fbcbb' #青色
+        white:   '0xd8dee9' #白色
       bright:
-        black:   '0x6e6a5b'
-        red:     '0xe72b6e'
-        green:   '0x8ecc0e'
-        yellow:  '0xdfce3d'
-        blue:    '0x44cde6'
-        magenta: '0x9862fb'
-        cyan:    '0x32d6b7'
-        white:   '0xddded3'
+        black:   '0x3b4252'
+        red:     '0x8f616a'
+        green:   '0xa3be8c'
+        yellow:  '0xebcb8b'
+        blue:    '0x81a1c1'
+        magenta: '0xb48ead'
+        cyan:    '0x8fbcbb'
+        white:   '0xd8dee9'
 
     font:
-      size: 11
+      size: 12
       normal:
-        family: Dejavu Sans Mono
+        family: FantasqueSansMono Nerd Font
         style: Regular
       bold:
-        family: Dejavu Sans Mono
+        family: FantasqueSansMono Nerd Font
       italic:
-        family: Dejavu Sans Mono
+        family: FantasqueSansMono Nerd Font

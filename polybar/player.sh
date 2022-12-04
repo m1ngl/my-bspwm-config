@@ -11,7 +11,7 @@ else
 		if [ -z "$playing" ]; then
 			echo "正在读取"
 		else
-			echo "听歌 : ${playing}"
+			echo "${playerlist} : ${playing}"
 		fi
 	fi
 fi

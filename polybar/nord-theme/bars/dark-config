@@ -1,0 +1,72 @@
+; vim:ft=dosini
+[global-wm]
+include-file = ../colors/dark-colors
+include-file = ../nord-top
+include-file = ../nord-down
+include-file = ../nord-config
+
+[bar/base]
+theme = dark
+monitor = ${config.monitor:}
+width = ${config.width}
+height = ${config.height}
+offset-x = ${config.offset-x}
+offset-y = ${config.offset-y}
+radius = ${config.radius}
+
+fixed-center = ${config.fixed-center}
+dpi = ${config.dpi:0}
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = ${config.line-size}
+
+padding = 0
+override-redirect = ${config.override-redirect}
+wm-restack = ${config.wm-restack}
+
+tray-padding = 3
+tray-detached = false
+tray-maxsize = 22
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+enable-ipc = true
+
+[bar/nord-top]
+inherit = bar/base
+
+module-margin = 1
+
+font-0 = WenQuanYiMicroHei:size=12
+font-1 = FontAwesome6FreeSolid:pixelsize=12;1
+font-2 = FontAwesome6FreeRegular:pixelsize=12;1
+font-3 = FontAwesome6Brands:pixelsize=8;1
+font-4 = FiraCodeRegular:pixelsize=12
+
+modules-left = ${config.top-left}
+modules-center = ${config.top-center}
+modules-right = ${config.top-right}
+
+tray-position = ${config.systray-top}
+
+[bar/nord-down]
+inherit = bar/base
+
+bottom = true
+
+module-margin = 2
+
+font-0 = WenQuanYiMicroHei:size=12
+font-1 = FontAwesome6FreeSolid:pixelsize=12;1
+font-2 = FontAwesome6Brands:pixelsize=8;1
+font-3 = Weather Icons:style=Regular:size=12;1
+font-4 = FiraCodeRegular:pixelsize=12
+
+modules-left = ${config.bottom-left}
+modules-center = ${config.bottom-center}
+modules-right = ${config.bottom-right}
+
+tray-position = ${config.systray-bottom}
