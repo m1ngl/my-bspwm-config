@@ -1,0 +1,64 @@
+[global]
+    monitor = 0
+    follow = mouse
+    width = 400
+    height = 500
+    origin = top-right
+    offset = 30x30
+    scale = 0
+    notification_limit = 0
+    progress_bar = true
+    indicate_hidden = yes
+    transparency = 0
+    separator_height = 1
+    padding = 10
+    horizontal_padding = 10
+    text_icon_padding = 0
+    frame_width = 3
+    frame_color = "#b48ead"
+    gap_size = 0
+    separator_color = frame
+    sort = yes
+    idle_threshold = 120
+    font = FantasqueSansMono Nerd Font 14
+    line_height = 0
+    markup = full
+    format = "<span foreground='#eceff4'><b> %s %p</b></span>\n%b"
+    alignment = left
+    vertical_alignment = center
+    show_age_threshold = 60
+    ellipsize = middle
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = no
+    icon_position = right
+    min_icon_size = 0
+    max_icon_size = 64
+    icon_path = /usr/share/icons/Qogir/32/status/:/usr/share/icons/Qogir/32/devices/:/usr/share/icons/Qogir/32/apps/:/usr/share/icons/Qogir/symbolic/status:/opt/QQ/resources/app/
+    sticky_history = yes
+    history_length = 20
+    always_run_script = true
+    corner_radius = 8
+    ignore_dbusclose = false
+    force_xinerama = false
+    mouse_left_click = close_current
+    mouse_middle_click = open_url, do_action, close_current
+    mouse_right_click = close_all
+    highlight = "#b48ead"
+
+[urgency_low]
+    background = "#88c0d0"
+    foreground = "#eceff4"
+    timeout = 10
+
+[urgency_normal]
+    background = "#81a1c1"
+    foreground = "#eceff4"
+    timeout = 10
+
+[urgency_critical]
+    background = "#b48ead"
+    foreground = "#eceff4"
+    timeout = 30
+    default_icon = /usr/share/icons/Qogir/32/status/dialog-warning.svg

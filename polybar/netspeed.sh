@@ -27,4 +27,4 @@
         fi
     fi
 
-    echo "${sp_tran} ${sp_recv}"
+    echo "[${sp_tran} ${sp_recv}]"

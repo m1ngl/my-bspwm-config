@@ -43,7 +43,7 @@ window {
     transparency: "screenshot";
     padding: 10px;
     border:  0px;
-    border-radius: 6px;
+    border-radius: 14px;
 
     background-color: @transparent;
     spacing: 0;
