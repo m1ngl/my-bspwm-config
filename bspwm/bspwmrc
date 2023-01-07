@@ -9,17 +9,17 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 # 鼠标光标在空窗口仍然是箭头而不是X
 xsetroot -cursor_name left_ptr
 # Polybar
-#~/.config/polybar/launch.sh
+~/.config/polybar/launch.sh
 # Fcitx5
-#fcitx5 & disown
+fcitx5 & disown
 # Picom窗口合成器
-picom-pj --config ~/.config/picom/picom-eden.conf & disown
+picom --config ~/.config/picom/picom-yaoc.conf --experimental-backends & disown
 # 壁纸
-#~/.config/bspwm/fehbg.sh 20 & disown
+#feh --bg-scale /path/to/wallpapers
 # 通知服务
 dunst & disown
 # 剪贴板服务
-#/usr/lib/gpaste/gpaste-daemon & disown
+/usr/lib/gpaste/gpaste-daemon & disown
 
 #工作区
 bspc monitor -d 一 二 三 四 五 六 七 八 九 十
