@@ -4,8 +4,10 @@
 # terminal emulator
 # 终端
 super + Return
-	alacritty
+	kitty
 
+super + ctrl + Return
+	st
 # 启动器
 super + @space
 	rofi -show drun
@@ -25,17 +27,18 @@ super + alt + {q,r}
 # 关闭或强制杀死窗口
 super + {_,shift + }q
 	bspc node -{c,k}
-
+# 文件管理器
 super + e
-	thunar
+	pcmanfm
 
-# alternate between the tiled and monocle layout
+# 单窗口模式
 super + m
 	bspc desktop -l next
 
 # send the newest marked node to the newest preselected node
+# 播放器
 super + y
-	bspc node newest.marked.local -n newest.!automatic.local
+	~/.config/bspwm/player.sh
 
 # swap the current node and the biggest window
 super + g
@@ -58,14 +61,20 @@ super + ctrl + {z,x}
 #
 
 # focus the next/previous window in the current desktop
+# @Super + @C & @Super + @Shift + @C
 super + {_,shift + }c
 	bspc node -f {next,prev}.local.!hidden.window
 
+super + {_,shift + }h
+	~/.config/bspwm/window-hinder.sh {hind,show}
+
 # focus the next/previous desktop in the current monitor
-super + bracket{left,right}
+# @Super + @{ & @Super +@}
+super + bracket{left,right} 
 	bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
+# @Super + @` & Super + @Tab
 super + {grave,Tab}
 	bspc {node,desktop} -f last
 
@@ -76,8 +85,22 @@ super + {o,i}
 	bspc wm -h on
 
 # focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# 新增功能：移动了Client之后，Desktop的focused也会跟着移动
+# 例：		NEW					OLD
+# 	0.  Desktop Focus	-> 2		Desktop Focus	-> 2
+#     	    Node Focus		-> 2.kitty	Node Focus	-> 2.kitty
+
+# 	1.  Super + Shift + 3
+
+# 	2.  Desktop Focus	-> 3		Desktop Focus	-> 2
+#     	    Node Focus		-> 3.kitty	Node Focus	-> 2.[Previous]
+super + shift + {1-9,0}
+	~/.config/bspwm/desktop-switcher.sh {1-9,10}
+
+
+super + {1-9,0}
+	bspc desktop -f '^{1-9,10}'
 
 # 旋转窗口
 super + d
