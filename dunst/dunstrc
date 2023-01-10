@@ -3,13 +3,13 @@
     follow = mouse
     width = 400
     height = 500
-    origin = top-right
-    offset = 30x30
+    origin = top-center
+    offset = 20x50
     scale = 0
     notification_limit = 0
     progress_bar = true
     indicate_hidden = yes
-    transparency = 0
+    transparency = 1
     separator_height = 1
     padding = 10
     horizontal_padding = 10
@@ -31,7 +31,7 @@
     ignore_newline = no
     stack_duplicates = true
     hide_duplicate_count = false
-    show_indicators = no
+    show_indicators = yes
     icon_position = right
     min_icon_size = 0
     max_icon_size = 64
@@ -39,7 +39,7 @@
     sticky_history = yes
     history_length = 20
     always_run_script = true
-    corner_radius = 8
+    corner_radius = 6
     ignore_dbusclose = false
     force_xinerama = false
     mouse_left_click = close_current
@@ -48,12 +48,12 @@
     highlight = "#b48ead"
 
 [urgency_low]
-    background = "#88c0d0"
+    background = "#2e3440"
     foreground = "#eceff4"
     timeout = 10
 
 [urgency_normal]
-    background = "#81a1c1"
+    background = "#3b4252"
     foreground = "#eceff4"
     timeout = 10
 

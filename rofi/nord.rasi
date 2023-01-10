@@ -28,13 +28,12 @@
 	nord14: #a3be8c;
 	nord15: #b48ead;
 
-    foreground:  @nord9;
+    foreground:  #eceff4;
     backlight:   #ccffeedd;
-    background-color:  #4C566A;
+    background-color:  #4c566a;
     
     highlight:     underline bold #eceff4;
 
-    transparent: rgba(46,52,64,0);
 }
 
 window {
@@ -43,9 +42,9 @@ window {
     transparency: "screenshot";
     padding: 10px;
     border:  0px;
-    border-radius: 14px;
+    border-radius: 24px;
 
-    background-color: @transparent;
+    background-color: transparent;
     spacing: 0;
     children:  [mainbox];
     orientation: horizontal;
@@ -61,7 +60,7 @@ message {
     padding: 5;
     border-color: @foreground;
     border:  0px 2px 2px 2px;
-    background-color: @nord7;
+    background-color: #eceff4;
 }
 
 inputbar {
@@ -71,7 +70,7 @@ inputbar {
 
     border: 1px;
     border-radius:  6px 6px 0px 0px;
-    border-color: @nord10;
+    border-color: @nord15;
 }
 
 entry, prompt, case-indicator {
@@ -84,16 +83,16 @@ prompt {
 }
 
 listview {
-    padding: 8px;
+    padding: 10px;
     border-radius: 0px 0px 6px 6px;
-    border-color: @nord10;
+    border-color: @nord15;
     border: 0px 1px 1px 1px;
     background-color: rgba(46,52,64,0.9);
-    dynamic: false;
+    dynamic: true;
 }
 
 element {
-    padding: 3px;
+    padding: 8px;
     vertical-align: 0.5;
     border-radius: 4px;
     background-color: transparent;
@@ -102,13 +101,23 @@ element {
 }
 
 element selected.normal {
-	background-color: @nord7;
+	background-color: @nord15;
 	text-color: #2e3440;
 }
 
-element-text, element-icon {
+element-text {
     background-color: inherit;
     text-color:       inherit;
+}
+
+/* transparent */
+element-icon {
+    size: 38px;
+    background-color: transparent;
+}
+
+element-icon selected.normal {
+    background-color: #b48ead;
 }
 
 button {
@@ -118,10 +127,10 @@ button {
 
     border: 2px 0px 2px 2px;
     border-radius: 4px 0px 0px 4px;
-    border-color: @foreground;
+    border-color: #eceff4;
 }
 
 button selected normal {
     border: 2px 0px 2px 2px;
-    border-color: @foreground;
+    border-color: #eceff4;
 }
